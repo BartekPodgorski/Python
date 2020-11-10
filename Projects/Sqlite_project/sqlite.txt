@@ -1,0 +1,87 @@
+import sqlite3
+#conn = sqlite3.connect(':memory:')
+
+conn = sqlite3.connect('customer.db')
+# Create a cursor
+c = conn.cursor()
+
+# Insert data into table
+
+#c.execute("INSERT INTO customers VALUES('Mary', 'Brown', 'Mary@domein.com')")
+
+
+
+# Insert many data into table
+#many_customers = [
+#	('Wes','Brown', 'wes@brown.com'),
+#	('Steph','Kuewa', 'steph@kuewa.com'),
+#	('Dan', 'Pas', 'dan@pas.com')
+#	]
+
+#c.executemany("INSERT INTO customers VALUES(?,?,?)", many_customers)
+
+#Query the database , if we want get primary key we have to use "rowid" after select, like % from wchich direction we are seareching
+#.execute("SELECT * FROM customers WHERE email like '%pas.com'")
+#print(c.fetchone())
+#print(c.fetchmany(3))
+items = c.fetchall()
+
+for element in items:
+	print(element)
+	#print(element[0] + ' ' + element[1] + '\t' + element[2])
+# Create a Table
+
+#c.execute("""CREATE TABLE customers (
+#		first_name text,
+#		last_name text,
+#		email text
+#	)""")
+
+# Datatypes:
+# NULL IS IT EXSIST?
+# INTEGER 1 , 4
+# REAL DECIMAL
+# TEXT
+# BLOB MP3/ IMAGE
+#print("Command executed succesfully...")
+# Commmit our command
+conn.commit()
+
+# Close our connection
+conn.close()
+
+
+---------------------------
+import sqlite3
+#conn = sqlite3.connect(':memory:')
+
+conn = sqlite3.connect('customer.db')
+# Create a cursor
+c = conn.cursor()
+
+# Update Records
+#
+#c.execute("""UPDATE customers SET first_name = "John"
+#		WHERE rowid = 1
+#	""")
+
+#delete records
+#c.execute("DELETE FROM customers WHERE rowid = 6")
+#Delete Table
+c.execute("DROP TABLE customers")
+conn.commit()
+
+#Query the Database - order by
+#c.execute("SELECT rowid, * FROM customers ORDER BY rowid DESC")
+#c.execute("SELECT rowid,* FROM customers WHERE last_name LIKE 'S%' AND rowid=3")
+#c.execute("SELECT rowid, * FROM customers LIMIT 2")
+items = c.fetchall()
+for element in items:
+	print(element)
+	
+
+# Commmit our command
+conn.commit()
+
+# Close our connection
+conn.close()

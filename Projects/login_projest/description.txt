@@ -1,0 +1,8 @@
+In this repository you can find two version of login like to e-mail. You have to download one package like keyboard, you can do it with this commend in cmd:
+
+pip install keyboard
+
+First version In this case our e-mails and passwords are stored in txt file. If you want to see this option you have to use file "login.py".
+
+Second version In this version all data are in sqlite database which you create by file "loginDb.py" 
+Here you can find commented part with create of table accounts. We have two columns here, first with e-mail and second for passwords. Main file is log_db.py.

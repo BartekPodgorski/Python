@@ -1,0 +1,4 @@
+In this file you can find BlackJack game. Main assumpyion 
+1.We use only one deck 
+2.Dealer hit cards when his hand value is smaller or equal than 17. (soft 17) 
+3.Have fun :)

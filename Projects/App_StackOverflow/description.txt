@@ -1,0 +1,1 @@
+With this simple app we can get question from python from stackoverflow. This questions are simple so we can get some extra points to us on stack.

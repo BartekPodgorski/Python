@@ -1,0 +1,2 @@
+This project based on great book 'Uczenie maszynowe z uzyciem Scikit-learn i TensorFlow'. 
+In this project i tried to predict the price of flats in California.
